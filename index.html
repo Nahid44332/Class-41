@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grade Calculation</title>
+    <title>Result</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <form action="" method="" onsubmit="calculateGrade()">
-        <label for="">Entere Marks:</label>
-        <input type="number" value="" id="marks" name="" placeholder="Enter Marks" required>
-        <input type="submit" value="Calculate">
-    </form>
-
-    <p id="result"></p>
-
+    <section class="sec">
+        <h3 class="Exam">Show Result</h3>
+        <form action="" method="post" onsubmit="calculate()">
+            <input class="int" type="number" value="" id="" placeholder="Enter Your Roll" required>
+            <input class="int" type="number" value="" id="" placeholder="Enter Your Reg No" required>
+            <input class="int" type="text" value="" id="mark" placeholder="Enter Your Marks" required>
+            <input class="sub" type="submit" value="Submit">
+        </form>
+        <h2 id="result" class="res"></h2>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

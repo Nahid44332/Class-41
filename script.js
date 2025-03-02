@@ -1,59 +1,45 @@
-
-
-function calculateGrade()
+function calculate()
 {
-
     event.preventDefault();
 
-    let marks = document.getElementById('marks').value; //"56"
+    let mark = document.getElementById('mark').value;
+    let converted = parseFloat(mark);
 
-    let convertedMarks = parseFloat(marks); // 56.0
-
-    if(convertedMarks > 100){
+    if (converted > 100){
         console.log("Invalid Marks");
         document.getElementById("result").innerHTML = "Invalid Marks";
     }
-
-    else if(convertedMarks < 0){
+    else if(converted < 0){
         console.log("Invalid Marks");
         document.getElementById("result").innerHTML = "Invalid Marks";
+        }
+    else if(converted >= 80){
+        console.log("Your Grade is A+");
+        document.getElementById("result").innerHTML = "Your Grade is A+";
     }
-
-    else if(convertedMarks >= 80){
-        console.log("The Grade is A+");
-        document.getElementById("result").innerHTML = "The Grade is A+";
+    else if(converted >= 70){
+        console.log("Your Grade is A");
+        document.getElementById("result").innerHTML = "Your Grade is A";
     }
-
-    else if(convertedMarks >= 70){
-        console.log("The Grade is A");
-        document.getElementById("result").innerHTML = "The Grade is A";
+    else if(converted >= 60){
+        console.log("Your Grade is -A");
+        document.getElementById("result").innerHTML = "Your Grade is -A";
     }
-
-    else if(convertedMarks >= 60){
-        console.log("The Grade is A-");
-        document.getElementById("result").innerHTML = "The Grade is A-";
+    else if(converted >= 50){
+        console.log("Your Grade is B");
+        document.getElementById("result").innerHTML = "Your Grade is B";
     }
-
-    else if(convertedMarks >= 50){
-        console.log("The Grade is B");
-        document.getElementById("result").innerHTML = "The Grade is B";
+    else if(converted >= 40){
+        console.log("Your Grade is C");
+        document.getElementById("result").innerHTML = "Your Grade is C";
     }
-
-    else if(convertedMarks >= 40){
-        console.log("The Grade is C");
-        document.getElementById("result").innerHTML = "The Grade is C";
+    else if(converted >= 33){
+        console.log("Your Grade is D");
+        document.getElementById("result").innerHTML = "Your Grade is D";
     }
-
-    else if(convertedMarks >= 33){
-        console.log("The Grade is D");
-        document.getElementById("result").innerHTML = "The Grade is D";
-    }
-
     else{
-        console.log("The Grade is F");
-        document.getElementById("result").innerHTML = "The Grade is F";
+        console.log("Your Grade is F");
+        document.getElementById("result").innerHTML = "Your Grade is F";
     }
-
-    document.getElementById('marks').value = "";
-
+    document.getElementById('mark').value ="";
 }
